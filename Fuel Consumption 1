@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int no_of_liters, distance_covered;
+    scanf("%d",& no_of_liters);
+    scanf("%d",& distance_covered);
+    if((no_of_liters>0)&&(distance_covered>0))
+    {
+        float lit_km = ((float)no_of_liters/distance_covered)*100;
+        printf("Liters/100KM\n%.2f\n",lit_km);
+        float miles = distance_covered * 0.6214;
+        float gallons = no_of_liters * 0.2642;
+        float mil_gal = miles / gallons;
+        printf("Miles/gallons\n%.2f",mil_gal);
+    }
+    else
+    {
+        printf("Invalid Input\n");
+    } 
+    return 0;
+}
