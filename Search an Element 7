@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int size,a,i;
+    float evencount=0;
+    scanf("%d\n",&size);
+    int arr[size];
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d\n",&arr[i]);
+    }
+    scanf("%d",&a);
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]==a)
+        {
+            evencount=1;
+            break;
+        }
+    }
+    if(evencount==1){
+        printf("%d is presented in an array.",a);
+    }
+    else{
+        printf("%d is not presented in an array.",a);
+    }
+    return 0;
+}
